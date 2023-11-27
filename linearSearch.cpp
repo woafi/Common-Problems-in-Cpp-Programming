@@ -10,7 +10,7 @@ int main()
         cout << "Element(" << i<<") : ";
         cin>>arr[i];
     }
-    int chk, j;
+    int chk=0, j=0, arrTemp[100];
     cout<<"\nEnter the Number to Search: ";
     cin>>num;
     for(i=0; i<n; i++)
