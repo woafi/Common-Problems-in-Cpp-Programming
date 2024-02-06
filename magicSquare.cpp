@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//magic Square Algorithm
 void magic(int n){
     if (n % 2 == 0){
         cout<<"Even";
@@ -35,7 +35,8 @@ void magic(int n){
 int main(){
     int n;
     cin>>n;
-    //call algorithm
-    magic(n);
+    
+    magic(n);  //calling algorithm
+
     return 0;
 }
