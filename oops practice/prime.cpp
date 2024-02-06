@@ -13,7 +13,7 @@ class IsPrime{
         int index, check=0;
         for (index=2; index< numb; index++){
             if(numb % index==0){
-                cout<<numb<<"number is not prime"<<endl;
+                cout<<numb<<" number is not prime"<<endl;
                 check++;
                 break;
             }

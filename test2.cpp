@@ -1,28 +1,21 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-string deletesubStr(string& str, const string& subStr){
-    size_t pos = 0;
-    while ((pos =str.find(subStr, pos)) != string::npos){
-        str.erase(pos, subStr.length());
+void fibo(long first, long sec, long n){
+    if(n==0){
+        return;
     }
-    return str;
 
+    long nxtteram=first+sec;
+    cout<<nxtteram<<" ";
+    fibo(sec, nxtteram, n-1);
 }
 
-
 int main(){
-    string str = "This is a sample text";
-    string subStr = "sample ";
-
-    cout<<"Original txt: "<<str;
-
-    string result = deletesubStr(str, subStr);
-
-    cout<<endl<<"After Modified: "<<result;
-
-
-
+    long n=5;
+    cout<<"0 ";
+    cout<<"1 ";
+    fibo(0, 1, n-2);
+    
     return 0;
 }
