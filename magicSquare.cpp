@@ -4,6 +4,7 @@ using namespace std;
 void magic(int n){
     if (n % 2 == 0){
         cout<<"Even";
+        return;
     } else{
         for (int i=0; i<n-1; i++){
             for (int j=0; j<n-1; j++){
@@ -14,12 +15,12 @@ void magic(int n){
                     int k,l;
                     if (i>=1){k=i-1;} else {k=n-1;}
                     if (j>=1){l=j-1} else {l=n-1;}
-                    if (sqaure[k][l] >=1) {i=(i+1)%n;
+                    if (sqaure[k][l] >= 1) {i=(i+1)%n;
                     }else {
                         i=k;
                         j=l;
                     }
-                    square[i][j]=key; 
+                    square[i][j]=key;
                 }
             }
         }
