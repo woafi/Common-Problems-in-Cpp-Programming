@@ -8,4 +8,5 @@ int main(){
     cout<< *(p+1)<<endl;
     cout<< *(p+2)<<endl;
     return 0;
+    
 }
