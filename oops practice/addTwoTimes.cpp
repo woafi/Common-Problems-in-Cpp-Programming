@@ -9,8 +9,9 @@ private:
 
 public:
     void getTime(void);
-    void putTime(void);
     void addTime(Time T1, Time T2);
+    void putTime(void);
+    
 };
 
 void Time::getTime(void)
