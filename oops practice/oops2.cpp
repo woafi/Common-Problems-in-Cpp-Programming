@@ -23,7 +23,7 @@ void book :: display(){
 
 int main(){
     book b1;
-    b1.name="Woafi";
+    //b1.name="Woafi"; cannot be written like this because name variable is declared in private
     b1.setData("Great Expectation", "Genre", 832);
     b1.display();
     return 0;
