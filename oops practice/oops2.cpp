@@ -4,7 +4,7 @@ using namespace std;
 class book {
     private:
         string name;
-        string genre;
+        string genre;           //by default private
         int price;
     public:
         void setData(string name1, string genre1, int price1){
