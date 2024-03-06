@@ -20,15 +20,15 @@ void binarySearch(int arr[], int first, int last, int key){
         if (key < arr[mid]){
             binarySearch(arr, first, mid-1, key);
         } else {
-            binarySearch(arr, first + 1, last, key);
+            binarySearch(arr, mid + 1, last, key);
         }
     }
 }
 
 int main(){
-    int arr[]={1,2,3,4,5,6,7,8,9};
-    int key = 4;
+    int arr[]={1};
+    int key = 1;
     int length = sizeof(arr)/ sizeof(arr[0]);
-    binarySearch(arr, 0, length, key);
+    binarySearch(arr, 0, length-1, key);
     return 0;
 }
