@@ -1,47 +1,40 @@
 #include <iostream>
-#include <limits>
+using namespace std;
 
-void maxmin_divide_and_conquer(int arr[], int start, int stop, int &min, int & max)
+class cal
 {
-    if (start == stop)
+    int a, b;
+
+public:
+    void setData(int d1, int d2)
     {
-        min = max = arr[start];
+        a = d1;
+        b = d2;
     }
-    else
+
+    friend cal sumComplex(cal o1, cal o2);
+
+    void printnumb()
     {
-        int midpoint = (start + stop) / 2;
-
-        int leftMin;
-        int leftMax;
-        int rightMin;
-        int rightMax;
-
-        maxmin_divide_and_conquer(arr, start, midpoint, leftMin, leftMax);
-        maxmin_divide_and_conquer(arr, midpoint + 1, stop, rightMin, rightMax);
-
-        if (leftMin < rightMin)
-            min = leftMin;
-        else
-            min = rightMin;
-
-        if (leftMax > rightMax)
-            max = leftMax;
-        else
-            max = rightMax;
+        cout << a << " + " << b << "i";
     }
+};
+
+cal sumComplex(cal o1, cal o2)
+{
+    cal obj;
+    obj.setData((o1.a + o1.b), (o2.b + o2.b));
+    return obj;
 }
 
 int main()
 {
-    const int size = 10;
-    int arr[size] = { 99, 34, 15, 17, 19, 26, 18, 783, 14, -6 };
+    cal o1, o2, o3;
+    o1.setData(2, 4);
+    o2.setData(3, 6);
 
-    int min;
-    int max;
-    maxmin_divide_and_conquer(arr, 0, size - 1, min, max);
-
-    std::cout << "Divide and Conquer recursive --- " << '\n';
-    std::cout << "Minimum is: " << min << '\n' << "Maximum is: " << max << "\n\n";
+    o3 = sumComplex(o1, o2);
+    o3.printnumb();
 
     return 0;
 }

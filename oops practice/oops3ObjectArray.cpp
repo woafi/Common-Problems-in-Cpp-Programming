@@ -14,7 +14,7 @@ public:
     }
     void getPrice(void)
     {
-        cout << "Enter ID of your Item: " << counter + 1 << endl;
+        cout << counter + 1 <<" Enter ID of your Item: "<< endl;
         cin >> itemId[counter];
         cout << "Enter Price of your Item: " << endl;
         cin >> itemPrice[counter];

@@ -7,7 +7,6 @@ void MaxMin(int arr[], int first, int last, int &Max, int &Min)
     if (first == last)
     {
         Max = Min = arr[first];
-        return;
     }
     else if (last == 1)
     {
