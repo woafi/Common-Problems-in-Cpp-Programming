@@ -12,15 +12,19 @@ public:
         return a + b;
     }
     int sumComplex(Complex, Complex);
+    int sumComComplex(Complex, Complex);
 };
 
 class Complex
 {
     int a;
     int b;
+    // Individually
+    // friend int Calculator :: sumComplex(Complex o1, Complex o2);
+    // friend int Calculator :: sumComComplex(Complex o1, Complex o2);
 
-    friend int Calculator :: sumComplex(Complex o1, Complex o2);
-
+    // Entire Calculator class as friend
+    friend class Calculator;
 public:
     void setData(int v1, int v2)
     {
@@ -38,6 +42,10 @@ int Calculator ::sumComplex(Complex o1, Complex o2)
 {
     return (o1.a + o2.a);
 }
+int Calculator ::sumComComplex(Complex o1, Complex o2)
+{
+    return (o1.b + o2.b);
+}
 
 int main()
 {
@@ -52,5 +60,7 @@ int main()
     Calculator calc;
     int result = calc.sumComplex(c1, c2);
     cout << "The sum of real part of o1 and o2 is " << result;
+    int resultComplex = calc.sumComComplex(c1, c2);
+    cout << "The sum of complex part of o1 and o2 is " << resultComplex;
     return 0;
 }
