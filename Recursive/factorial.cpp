@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-void logic(int i, int x, int fact){
+void logic(int i, int x, int &fact){
     if(i==x){
         fact*=i;
-        cout<<fact;
+        //cout<<fact<<endl;
         return;
     }
 
@@ -16,6 +16,8 @@ int main (){
     cout<<"Enter the number: ";
     int x;
     cin>>x;
-    logic(1, x, 1);
+    int fact=1;
+    logic(1, x, fact);
+    cout<<fact<<endl;
     return 0;
 }

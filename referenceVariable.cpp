@@ -3,7 +3,7 @@ using namespace std;
 
 
 int main(){
-    float x = 455;
+    float x = 655;
     float & y = x;
     cout<<x<<endl;
     cout<<y<<endl;

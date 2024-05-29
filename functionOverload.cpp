@@ -1,5 +1,7 @@
 #include<iostream>
     using namespace std;
+
+    //function prototypes
     float vol(int,int);
     float vol(float);
     int vol(int);
