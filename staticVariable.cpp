@@ -2,8 +2,8 @@
 using namespace std;
 
 int product(int a, int b){
-    static int c=0;
-    c=c+1;
+    static int c; //default value c = 0;
+    c++;
     return (a*b)+c;
 }
 

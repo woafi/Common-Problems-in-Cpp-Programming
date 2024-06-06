@@ -22,6 +22,8 @@ void binary :: chk_bin(void){
         if(s.at(i)!='0' && s.at(i)!='1'){
             cout<<"Incorrect binary format"<<endl;
             exit(0);
+        } else{
+            cout<<"correct binary format"<<endl;
         }
     }
     

@@ -1,29 +1,43 @@
-#include <cmath>
-#include <cstdio>
-#include <vector>
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
+class shop
+{
+    int itemId[100];
+    int itemPrice[100];
+    int counter = 0;
 
-int main() {
-    int x,y,s=0;
-    cin>>x>>y;
-    int* arr[x];
-    while (x--){
-        int n;
-        cin>>n;
-        arr[s] = new int[n];
-        for (int i = 0; i < n; i++)
+public:
+    void initCounter(void)
+    {
+        counter = 0;
+    }
+    void getPrice(void)
+    {
+        cout << counter + 1 << " Enter ID of your Item: " << endl;
+        cin >> itemId[counter];
+        cout << "Enter Price of your Item: " << endl;
+        cin >> itemPrice[counter];
+        counter++;
+    }
+    void displayPrice(void)
+    {
+        for (int i = 0; i < counter; i++)
         {
-            cin>>arr[s][i];
+            cout << "The Price of item with Id " << itemId[i] << " is " << itemPrice[i] << endl;
         }
-        s++;
     }
-    while(y--){
-        int a,b;
-        cin>>a>>b;
-        cout<<arr[a][b]<<endl;
+};
+
+int main()
+{
+    shop dukaan;
+
+    for (int i = 0; i < 2; i++)
+    {   
+        dukaan.getPrice();
+        dukaan.displayPrice();
     }
+
     return 0;
 }

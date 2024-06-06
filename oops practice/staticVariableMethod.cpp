@@ -24,7 +24,7 @@ public:
     }
 };
 
-int student ::count = 100; // default value = 0;
+int student :: count = 100; // default value = 0;
 
 int main()
 {

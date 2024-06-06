@@ -5,13 +5,10 @@ class shop
 {
     int itemId[100];
     int itemPrice[100];
-    int counter;
+    int counter = 0;
 
 public:
-    void initCounter(void)
-    {
-        counter = 0;
-    }
+
     void getPrice(void)
     {
         cout << counter + 1 <<" Enter ID of your Item: "<< endl;
@@ -35,10 +32,22 @@ int main()
     shop dukaan[2];
     for (int i = 0; i < 2; i++)
     {
-        dukaan[i].initCounter();
         dukaan[i].getPrice();
         dukaan[i].displayPrice();
     }
 
     return 0;
 }
+
+//int main()
+// {
+//     shop dukaan;
+
+//     for (int i = 0; i < 2; i++)
+//     {   
+//         dukaan.getPrice();
+//         dukaan.displayPrice();
+//     }
+
+//     return 0;
+// }

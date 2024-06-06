@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <iostream>
+using namespace std;
 
 void update(int *a,int *b) {
         int c= *a + *b;
@@ -15,6 +17,7 @@ int main() {
     int *pa = &a, *pb = &b;
     
     scanf("%d %d", &a, &b);
+    //cout<< *pa<<endl;
     update(pa, pb);
     printf("%d\n%d", a, b);
 

@@ -2,24 +2,24 @@
 using namespace std;
 class large{
     public:
-        int findLargest(int, int);
-};
-int large::findLargest(int a, int b){
+        int findLargest(int a, int b){
     if(a>b)
         return a;
     else
         return b;
-}
+    }
+};
+
 class small{
     public:
-        int findSmalest(int, int);
-};
-int small::findSmalest(int a, int b){
+        int findSmalest(int a, int b){
     if(a<b)
         return a;
     else
         return b;
-}
+    }
+};
+
 int main(){
     large l;
     small s;
@@ -29,12 +29,10 @@ int main(){
     cin>>numOne>>numTwo;
 
     larg = l.findLargest(numOne, numTwo);
-    cout<<"\nLargest = "<<larg;
-    cout<<endl;
+    cout<<"\nLargest = "<<larg<<endl;
 
     sm = s.findSmalest(numOne, numTwo);
-    cout<<"\nSmallest = "<<sm;
-    cout<<endl;
+    cout<<"\nSmallest = "<<sm<<endl;
 
     return 0;
 }
