@@ -5,10 +5,17 @@ using namespace std;
 
 
 int main(){
-    int arr[5];
-    for (int a=0; a<5; a++){
-        cin>>arr[a];
+    int p;
+    cin>>p;
+    int solution;
+    int count;
+    while(p--){
+        int a,b,c;
+        cin>>a>>b>>c;
+        solution = a + b + c;
+        if(solution == 0){
+            count++;
+        }
     }
-    cout<<arr[4];
     return 0;
 }
