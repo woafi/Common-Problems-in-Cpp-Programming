@@ -1,21 +1,22 @@
-#include<iostream> 
-#include <algorithm> 
+#include <bits/stdc++.h>
 using namespace std;
 
-
+#define ll long long
 
 int main(){
-    int p;
-    cin>>p;
-    int solution;
-    int count;
-    while(p--){
-        int a,b,c;
-        cin>>a>>b>>c;
-        solution = a + b + c;
-        if(solution == 0){
-            count++;
-        }
+    ll n; cin>> n;
+    ll arr[n];
+    for (ll i = 0; i < n; i++)
+    {
+        cin>>arr[i];
     }
+
+    ll plat = 0;
+    while (plat < n-1 && arr[plat] < arr[plat + 1]){
+        plat++;
+    }
+    
+    cout<<arr[plat]<<endl;
+
     return 0;
 }
