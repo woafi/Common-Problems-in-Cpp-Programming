@@ -4,19 +4,15 @@ using namespace std;
 #define ll long long
 
 int main(){
-    ll n; cin>> n;
-    ll arr[n];
-    for (ll i = 0; i < n; i++)
-    {
-        cin>>arr[i];
+    char a[123]; 
+    cin>> a;
+    int i = 1;
+    a[5] = 'a';
+    cout<<(a[i] == '\0');
+    while (a[i] == '\0'){
+        i++;
     }
-
-    ll plat = 0;
-    while (plat < n-1 && arr[plat] < arr[plat + 1]){
-        plat++;
-    }
-    
-    cout<<arr[plat]<<endl;
+    cout<<a[5]<<i;
 
     return 0;
 }
