@@ -11,12 +11,13 @@ class pen{
     pen(){
         cout<<"auto"<<endl;
     }
-    pen(){
-        cout<<"auto2"<<endl;
-    }
+    // pen(){
+    //     cout<<"auto2"<<endl;
+    // }                            // cant be cuz pen :: pen cant be overloaded
 };
 void pen :: colorprint(){
     cout<< color<<endl;
+    cout<< type<<endl;
 }
 void pen :: displaydata(void){
     cout<<"Writing Something"<<endl;
@@ -25,6 +26,7 @@ void pen :: displaydata(void){
 int main(){
     pen pen1;
     pen1.color="Black";
+    getline(cin, pen1.type);
     pen1.displaydata();
     pen1.colorprint();
     return 0;

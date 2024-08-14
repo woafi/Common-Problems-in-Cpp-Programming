@@ -27,6 +27,7 @@ public:
         cout << "Enter book genre: ";
         getline(cin, genre);
         cout << "Enter book price: ";
+        cin.ignore();
         cin >> price;
         //cin.ignore(numeric_limits<streamsize>::max(), '\n');  // Clear the newline character left in the buffer
     }

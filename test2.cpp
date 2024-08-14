@@ -4,9 +4,11 @@ using namespace std;
 #define ll long long
 
 int main(){
-    char a[123] = {'0', 'a'}; 
-    cin>> a;
-    cout<<a;
-
+    char c[10];
+    cin >> c;
+    
+    int a = c[2] - 'a';
+    cout<< a ;
+    
     return 0;
 }

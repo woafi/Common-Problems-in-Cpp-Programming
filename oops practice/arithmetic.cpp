@@ -13,7 +13,7 @@ class FLOAT
             }
 
             float operator+(FLOAT F)
-            {
+            {   
                 return(a+F.a);
             }
 
@@ -38,7 +38,7 @@ class FLOAT
 int main()
 {
     FLOAT f1(10.10),f2(20.20);
-
+    
     cout<<"\n\n Operator + : "<<f1+f2;
     cout<<"\n\n Operator - : "<<f1-f2;
     cout<<"\n\n Operator * : "<<f1*f2;

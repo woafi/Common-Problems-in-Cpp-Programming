@@ -7,7 +7,7 @@ int main() {
     cin >> a >> b >> c;
     
     // Store the numbers in an array for easy sorting
-    int arr[3] = {a, b, c};
+    int arr[] = {a, b, c};
     
     // Sort the array
     sort(arr, arr + 3);

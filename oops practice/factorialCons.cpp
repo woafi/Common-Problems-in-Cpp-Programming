@@ -3,15 +3,15 @@ using namespace std;
 class factorial
 {
 	public:
-	long fact=1;
-	int num;
+	long long fact=1;
+	long long num;
 	void fact_function();
 	void display();
-	factorial(int a);	
+	factorial(long long a);	
 };
  
 	//parametrized constructor 
-	factorial::factorial(int a)
+	factorial::factorial(long long a)
 	{
 		num=a;
 	}
@@ -19,7 +19,7 @@ class factorial
 	void factorial::fact_function()
 	{
 	
-	for(int i=1;i<=num;i++)
+	for(long long i=1;i<=num;i++)
 	{
 	fact=fact*i;
 	
@@ -33,7 +33,7 @@ class factorial
  
 int main()
 {
-	int num;
+	long long num;
 	cout<<"Please enter a number: ";
 	cin>>num;
 	

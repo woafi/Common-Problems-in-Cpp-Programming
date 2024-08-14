@@ -26,28 +26,28 @@ public:
     }
 };
 
-int main()
-{
-
-    shop dukaan[2];
-    for (int i = 0; i < 2; i++)
-    {
-        dukaan[i].getPrice();
-        dukaan[i].displayPrice();
-    }
-
-    return 0;
-}
-
-//int main()
+// int main()
 // {
-//     shop dukaan;
 
+//     shop dukaan[2];
 //     for (int i = 0; i < 2; i++)
-//     {   
-//         dukaan.getPrice();
-//         dukaan.displayPrice();
+//     {
+//         dukaan[i].getPrice();
+//         dukaan[i].displayPrice();
 //     }
 
 //     return 0;
 // }
+
+int main()
+{
+    shop dukaan;
+
+    for (int i = 0; i < 2; i++)
+    {   
+        dukaan.getPrice();
+        dukaan.displayPrice();
+    }
+
+    return 0;
+}
