@@ -1,27 +1,29 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <algorithm>
+
 using namespace std;
 
-#define ll long long
-const int s = 1e7+123;
-char c[s]; 
-
-int main(){
+int main()
+{
+    string str, reverseStr;
     
-    cin >> c;
-    int arr[30] = {0};
-    for (int i = 0; c[i] != 0; i++)
+    /* Input string from user */
+    getline(cin, str);  // Use getline to allow input with spaces
+    
+    reverseStr = str;  // Copy original string to reverseStr
+    
+    reverse(reverseStr.begin(), reverseStr.end());  // Reverse the string
+    
+    /* Check whether both strings are equal or not */
+    if(str == reverseStr)  // Compare original string with reversed string
     {
-        int u = c[i] - 'a';
-        arr[u]++;
+        cout << "YES" << endl;
     }
-    
-    for (int i = 0; i < 26; i++){
-        if (arr[i] > 0 ){
-            char a = i + 'a';
-            cout<<a<<" "<<":"<<" "<<arr[i]<<endl;
-        }
+    else
+    {
+        cout << "NO" << endl;
     }
-    
     
     return 0;
 }
