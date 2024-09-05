@@ -3,17 +3,18 @@
 using namespace std;
 
 int main() {
-    int a, b, c;
-    cin >> a >> b >> c;
     
     // Store the numbers in an array for easy sorting
-    int arr[] = {a, b, c};
-    
+    int arr[] = {3, 8, 6, 4, 9, 5};
+    int len = sizeof(arr)/sizeof(arr[0]);
     // Sort the array
-    sort(arr, arr + 3);
+    sort(arr, arr+len);
+    for (auto u: arr) cout<< u<< " ";
+    cout<<endl;
+    sort(arr, arr+len, greater<int>()); //for reversing array
     
     // Output the sorted numbers
-    cout << arr[0] << " " << arr[1] << " " << arr[2] << endl;
+    for (auto u: arr) cout<< u<< " ";
     
     return 0;
 }
