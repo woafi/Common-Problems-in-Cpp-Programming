@@ -6,15 +6,16 @@ using namespace std;
 
 int main(){
     optimize();
-    
-    string s = "100", u = "10";
-    sort(s.rbegin(), s.rend());
-    cout<<s<<endl;
-    if (u == s){
-        cout<<"1"<<endl;
+
+    int t;
+    cin >> t;
+    while(t--){
+        string str;
+        char c;
+        cin>>c;
+        getline(cin, str);
+        str = c + str;
+        cout<<str<<'\n';
     }
-    
-
-
     return 0;
 }

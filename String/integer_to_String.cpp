@@ -6,15 +6,9 @@ using namespace std;
 
 int main(){
     optimize();
-    
-    string s = "100", u = "10";
-    sort(s.rbegin(), s.rend());
-    cout<<s<<endl;
-    if (u == s){
-        cout<<"1"<<endl;
-    }
-    
 
-
+    int n = 12345;
+    string str = to_string(n);
+    cout<< str << endl;
     return 0;
 }

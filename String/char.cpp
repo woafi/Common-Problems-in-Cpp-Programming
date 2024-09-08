@@ -6,15 +6,13 @@ using namespace std;
 
 int main(){
     optimize();
-    
-    string s = "100", u = "10";
-    sort(s.rbegin(), s.rend());
-    cout<<s<<endl;
-    if (u == s){
-        cout<<"1"<<endl;
-    }
-    
 
-
+    char a = 'A';
+    bool fi = isupper(a); 
+    bool fx = islower(a); //isspace()
+    
+    cout<< fx <<endl;
+    a = tolower(a); //toupper
+    cout<< a <<endl;
     return 0;
 }

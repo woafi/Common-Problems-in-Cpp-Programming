@@ -6,15 +6,10 @@ using namespace std;
 
 int main(){
     optimize();
-    
-    string s = "100", u = "10";
-    sort(s.rbegin(), s.rend());
-    cout<<s<<endl;
-    if (u == s){
-        cout<<"1"<<endl;
-    }
-    
 
-
+    string str = "12324";
+    int a = stoi(str);
+    a++;
+    cout<< a <<endl;
     return 0;
 }

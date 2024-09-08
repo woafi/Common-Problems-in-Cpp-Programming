@@ -11,7 +11,7 @@ int main() {
         cout << "ALPHA" << endl;
         cout << "IS CAPITAL" << endl;
     } else if (X >= 'a' && X <= 'z') {
-        cout << "ALPHA" << endl;
+        cout << "ALPHA S" << endl;
         cout << "IS SMALL" << endl;
     }
 
