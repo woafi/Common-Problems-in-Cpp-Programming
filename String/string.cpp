@@ -20,5 +20,8 @@ int main(){
     s.erase( remove (s.begin(), s.end(), 'a'),s.end());
     cout<<s<<endl;
     if (s.find("moh")!= -1) cout<<"found"<<endl;
+    if (next_permutation(s.begin(), s.end())){
+        cout<<s<<endl;
+    }
     return 0;
 }
