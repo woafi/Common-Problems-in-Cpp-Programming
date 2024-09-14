@@ -16,8 +16,11 @@ int main(){
     v.push_back ({6, 1});
     v.push_back ({1, 5});
 
-    sort (v.begin(), v.end());
 
+    cout<<v[1].first <<" "<<v[1].second<<endl<<endl;
+
+    sort (v.begin(), v.end());
+    
     for (auto u : v) cout << u.first << " " << u.second << endl;
     return 0;
 }

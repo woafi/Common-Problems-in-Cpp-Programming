@@ -7,15 +7,22 @@ using namespace std;
 int main(){
     optimize();
 
-    int t;
-    cin >> t;
-    while(t--){
-        string str;
-        char c;
-        cin>>c;
-        getline(cin, str);
-        str = c + str;
-        cout<<str<<'\n';
+    // int t;
+    // cin >> t;
+    // while(t--){
+    //     string str;
+    //     char c;
+    //     cin>>c;
+    //     getline(cin, str);
+    //     str = c + str;
+    //     cout<<str<<'\n';
+    // }
+    string newStr = "fine go now";
+    for (auto u : newStr ){
+        cout<<u;
+        if (isspace(u)){
+            cout<<endl;
+        }
     }
     return 0;
 }
