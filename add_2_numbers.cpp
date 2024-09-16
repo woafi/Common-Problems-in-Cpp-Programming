@@ -8,5 +8,9 @@ int main(){
     
     long long int sum = numb1 + numb2;
     cout<<"The sum: "<< sum<< endl;
+
+    int n = INT_MAX;
+    int m = INT_MIN;
+
     return 0;
 }

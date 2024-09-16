@@ -7,25 +7,13 @@ using namespace std;
 int main(){
     optimize();
 
-    int n; cin >> n;
+        
+       string s = "asdawdadsad";
 
-    map<int, int> m;
+       sort(s.begin(), s.end());
 
-    for (int i = 0; i < n; i++)
-    {
-        int a;  cin >> a;
-        m[a]++;
-    }
-    int ans = 0;
-    for (auto u : m){
-        if (u.second >= u.first){
-            ans += u.second - u.first;
-        } else {
-            ans += u.second;
-        }
-    }
+       cout<< s <<endl;
+        
 
-    cout << ans << endl;
-    
     return 0;
 }

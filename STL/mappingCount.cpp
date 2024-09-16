@@ -21,7 +21,7 @@ int main(){
     }
 
     for (auto u : cnt){
-        cout << u.second<<endl; 
+        cout << u.first <<" "<< u.second<<endl; 
     }
 
     cout<<endl<<cnt.size()<<endl;
