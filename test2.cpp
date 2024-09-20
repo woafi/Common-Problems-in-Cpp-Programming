@@ -4,33 +4,37 @@ using namespace std;
 #define ll long long
 #define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
-bool isPair(int i, int j, int arr[], int n){
-    if (i != j && arr[ i ] - arr[ j ] == n){
-        return true;
-    }
-    return false;
-}
-
 int main(){
     optimize();
 
-    int arr[]= {1, 5, 4, 1, 2};
-        int len = sizeof(arr)/sizeof(arr[0]);
-        int n = 0;
-        vector <pair<int, int>> v;
-        for (int i = 0; i < len; i++)
-        {
-            for (int j = 0; j < len; j++)
-            {
-                if ( isPair(i, j, arr, n)){
-                    v.push_back({arr[i], arr[j]});
-                }
-            }
-            
+    vector<string> operations = {"-21","-66","39","+","+"};
+
+    stack <int> st;
+
+    for (auto u : operations){
+        if (u.size() > 1){
+            int n = stoi(u);
+            st.push(n);
+            cout << st.top() << endl <<endl;
         }
-        sort (v.begin(), v.end());
-        int Sz = unique (v.begin(), v.end()) - v.begin();
-        cout << Sz << endl;
+
+        if (u == "+"){
+            int n1 = st.top();
+            st.pop();
+            int n2 = st.top();
+            int sum = n1 + n2;
+            st.push(n1);
+            st.push(sum);
+            }
+
         
+    }
+
+    int ans = 0;
+        while (!st.empty()){
+            ans += st.top();
+            st.pop();
+        }
+    
     return 0;
 }

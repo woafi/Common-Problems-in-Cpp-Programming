@@ -7,6 +7,9 @@ int main(){
     cout<< *p<<endl;
     cout<< *(p+1)<<endl;
     cout<< *(p+2)<<endl;
+    for (auto u : arr){
+        cout<< u <<" ";
+    }
     return 0;
     
 }

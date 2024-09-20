@@ -1,27 +1,20 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-#define ll long long
-#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-
-int main(){
-    int n;
-    cin >> n;
-    int k;
-    cin >> k;
-    vector <int> c(n);
-    for (int i = 0; i < n; i++)
-    {
-        cin >> c[i];
-    }
-    int cnt = 0;
-    for (int i = 0; i < n; i++){
-        if (c[i] >= c[k]){
-            cnt++;
+if (u.size() > 1){
+            int n = stoi(u);
+            st.push(n);
+        }else if (isdigit(u[0])){
+            st.push (u[0] - '0');
+        }else if (u == "+"){
+            int n1 = st.top();
+            st.pop();
+            int n2 = st.top();
+            int sum = n1 + n2;
+            st.push(n1);
+            st.push(sum);
+            }else if (u == "C"){
+            st.pop();
+            }else if (u == "D"){
+            int m = st.top();
+            int mal = 2 * m;
+            st.push(mal);
+            }
         }
-    }
-    cout<< cnt <<endl;
-    
-
-    return 0;
-}
