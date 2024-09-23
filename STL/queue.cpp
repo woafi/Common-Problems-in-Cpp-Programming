@@ -7,17 +7,17 @@ using namespace std;
 int main(){
     optimize();
 
-    stack <int> st;
+    queue <int> st;
     st.push(1);
     st.push(2);
     st.push(3);
     st.push(4);
     st.pop();
-    cout << st.top() << endl;
+    cout << st.front() << endl << endl;
 
     while (!st.empty())
     {
-        cout << st.top() << endl;
+        cout << st.front() << endl;
         st.pop();
     }
 

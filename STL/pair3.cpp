@@ -23,6 +23,10 @@ int main(){
 
     sort(v.begin(), v.end(), cmp);
 
+    for (auto u : v){
+        cout << u.first << " " << u.second << endl;
+    }
+
     int cnt = 0;
     for (int i = 0; i < v.size(); i++)
     {

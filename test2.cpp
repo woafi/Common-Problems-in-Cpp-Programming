@@ -7,34 +7,27 @@ using namespace std;
 int main(){
     optimize();
 
-    vector<string> operations = {"-21","-66","39","+","+"};
+    int n; cin >> n;
+    int m; cin >> m;
+    priority_queue <int> q;
 
-    stack <int> st;
-
-    for (auto u : operations){
-        if (u.size() > 1){
-            int n = stoi(u);
-            st.push(n);
-            cout << st.top() << endl <<endl;
-        }
-
-        if (u == "+"){
-            int n1 = st.top();
-            st.pop();
-            int n2 = st.top();
-            int sum = n1 + n2;
-            st.push(n1);
-            st.push(sum);
-            }
-
-        
+    for(int i = 0; i < n; i++){
+        int a; cin >> a;
+        q.push(a);
     }
-
     int ans = 0;
-        while (!st.empty()){
-            ans += st.top();
-            st.pop();
+    for (int i = 0; i < m; i++)
+    {
+        int t = q.top();
+        q.pop();
+        ans += t;
+        int t2 = t-1;
+        if (t2 != 0){
+            q.push(t2);
         }
+    }
+    cout << ans << endl;
+    
     
     return 0;
 }
