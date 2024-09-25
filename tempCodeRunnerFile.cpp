@@ -1,1 +1,1 @@
-static_cast<ll>
+cout << r << " " << l <<endl;
