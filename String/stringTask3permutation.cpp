@@ -26,7 +26,7 @@ int main() {
         do {
             cout << letters << endl;
             count++;
-            if (count == K) break;
+            // if (count == K) break;
         } while (next_permutation(letters.begin(), letters.end()));
     }
 
