@@ -11,9 +11,7 @@ class pen{
     pen(){
         cout<<"auto"<<endl;
     }
-    // pen(){
-    //     cout<<"auto2"<<endl;
-    // }                            // cant be cuz pen :: pen cant be overloaded
+                                // cant be cuz pen :: pen cant be overloaded
 };
 void pen :: colorprint(){
     cout<< color<<endl;

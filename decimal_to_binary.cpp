@@ -23,17 +23,15 @@ typedef set<int> :: iterator sit;
 
 int main() {
     optimize();
-
-    set <char> se;
-    string s;
-    cin >> s;
-    for (int i = 0; i < SZ(s); i++) {
-        se.insert(s[i]);
+    vi v;
+    int n; cin >> n;
+    while(n > 0){
+        v.push_back(n % 2);
+        n /= 2;
     }
-    if (SZ(se) % 2 == 0){
-        cout << "CHAT WITH HER!" << endl;
-    }else {
-        cout << "IGNORE HIM!" << endl;
+    reverse(ALL(v));
+    for (auto u : v){
+        cout << u;
     }
 
     return 0;
